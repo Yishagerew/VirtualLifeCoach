@@ -27,9 +27,6 @@
 			 <property name="eclipselink.ddl-generation.output-mode"
 				value="database" />
 			<property name="eclipselink.jpa.uppercase-column-names" value="true"/> 
-
-			<!-- hello <property name="eclipselink.ddl-generation" value="create-tables" 
-				/> -->
 		</properties>
 	</persistence-unit>
 </persistence>
