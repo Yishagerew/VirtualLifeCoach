@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="VirtualLifeCoachApp">
+		<class>model.Activity</class>
+		<class>model.Caregiver</class>
+		<class>model.Careperson</class>
+		<class>model.Currentmeasure</class>
+		<class>model.Measuredefinition</class>
+		<class>model.Measuredefinitionrange</class>
+		<class>model.Measurehistory</class>
+		<class>model.Person</class>
+		<class>model.Personalgoal</class>
+		<class>model.Reminder</class>
+		<validation-mode>AUTO</validation-mode>
+		<properties>
+		 <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+		 <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/VirtualLifeCoach" />
+		 <property name="javax.persistence.jdbc.user" value="root" />
+	     <property name="javax.persistence.jdbc.password" value="root" /> 
+			<!-- Scan for annotated classes and Hibernate mapping XML files -->
+			<property name="hibernate.archive.autodetection" value="class, hbm" />
+			<property name="eclipselink.logging.level" value="ALL" />
+			<property name="eclipselink.ddl-generation" value="none" />    
+			<!-- <property name="eclipselink.ddl-generation" value="drop-and-create-tables"/> -->
+			<!-- it means that automatic changes will be directly applied to the database 
+				this is not reccommended, but we will use it as example only -->
+			 <property name="eclipselink.ddl-generation.output-mode"
+				value="database" />
+			<property name="eclipselink.jpa.uppercase-column-names" value="true"/> 
+
+			<!-- hello <property name="eclipselink.ddl-generation" value="create-tables" 
+				/> -->
+		</properties>
+	</persistence-unit>
+</persistence>
